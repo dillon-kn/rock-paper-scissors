@@ -4,8 +4,51 @@
     <head>
         <title>Rock Paper Scissors</title>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles.css">
+        <script src="scripts.js" defer></script>
     </head>
     <body>
-        <script src="scripts.js"></script>
+        <div class="intro-container">
+            <h1>Welcome to ROCC, PAEBR, ZIZRZ!</h1>
+            <h3>The ROCC crushes (FaZe) ZIZRZ, (FaZe) ZIZRS slices PAEBR, and PAEBR strangles The ROCC!</h3>
+ 
+        </div>
+        <img src="dr-k-asserting-dominance.jpg" alt="Dr Alok Kanojia T-Posing on Us Scrubs" id="dr-k-t-pose">
+        <h4>Alok Kanojia, Leader of Kanojia's Kult, challenges you to a game of ROCC, PAEBR, ZIZRS! Do you have what it takes?</h4>
+        <div class="choice-container">
+            <h2>Choose your weapon against Kult Leader Kanojia!</h2>
+            <div class="choices">
+                <button class="choice" id="rock">
+                    ROCC
+                </button>
+                <button class="choice" id="paper">
+                    PAEBR
+                </button>
+                <button class="choice" id="scissors">
+                    ZIZRZ
+                </button>
+            </div>
+            <div class="score-outer-container">
+                <h1>SCORE</h2>
+                <div class="score-inner-container">
+                    <div class="score">
+                        <h3 id="potential-convert">
+                            0
+                        </h3>
+                        <p>
+                            Potential Convert
+                        </p>
+                    </div>
+                    <div class="score">
+                        <h3 id="kanojia">
+                            0
+                        </h3>
+                        <p>
+                            Kult Leader Kanojia
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
