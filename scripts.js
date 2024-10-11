@@ -10,8 +10,8 @@ const winnerKey = {
 }
 
 const currentScore = {
-    "kanojia": 0,
-    "potential-convert": 0
+    "Supreme Intelligence": 0,
+    "Mere Mortal": 0
 }
 
 const game = () => {
@@ -61,15 +61,15 @@ const playRound = (choice) => {
     }
 
     else if (winnerKey[computerMove] === userMove) {
-        winner = "kanojia"
+        winner = "Supreme Intelligence"
         result.textContent = `
-            He read your mind! He knew you would play ${title(userMove)} and beat you with ${title(computerMove)}!
+            It read your mind! It knew you would play ${title(userMove)} and beat you with ${title(computerMove)}!
         `
     }
 
     else {
-        winner = "potential-convert";
-        result.textContent = `You did it! You psychoanalyzed him and predicted he would play ${title(computerMove)}! You're good at this!`
+        winner = "Mere Mortal";
+        result.textContent = `You did it! You psychoanalyzed Supreme Intelligence and predicted it would play ${title(computerMove)}! You're good at this!`
     }
 
     incrementScore(winner);
@@ -96,19 +96,19 @@ const showScore = () => {
 
 const checkGameEnd = () => {
     // If someone reaches 5 points
-    potentialConvertScore = currentScore['potential-convert'];
-    kanojiaScore = currentScore['kanojia'];
-    if (potentialConvertScore === 5 || kanojiaScore === 5) {
+    potentialConvertScore = currentScore['Mere Mortal'];
+    supremeIntelligenceScore = currentScore['Supreme Intelligence'];
+    if (potentialConvertScore === 5 || supremeIntelligenceScore === 5) {
 
         const finalResult = document.createElement('h2');
         finalResult.setAttribute('id', 'final-result')
         const choiceContainer = document.querySelector('.choice-container')
 
         if (potentialConvertScore === 5) {
-            finalResult.textContent = "Congrats! You fought off Kult Leader Kanojia's Kunning Kharisma and avoided Konversion!!!";
+            finalResult.textContent = "Congrats! You defeated the Supreme Intelligence and saved humanity!";
         }
         else {
-            finalResult.textContent = "Dah! You were inKapable of Kombating Kult Leader Kanojia's Kunning Kharisma and Konsented to Konversion!!!";
+            finalResult.textContent = "Dah! In a valiant effort, our Mere Mortal falters in the might of Supreme Intelligence!";
         }
         choiceContainer.appendChild(finalResult)
 
@@ -138,8 +138,8 @@ const addResetButton = () => {
 
 const resetPage = () => {
     // Reset scores
-    currentScore['potential-convert'] = 0;
-    currentScore['kanojia'] = 0;
+    currentScore['Mere Mortal'] = 0;
+    currentScore['Supreme Intelligence'] = 0;
     showScore();
 
     // Remove result div, final result div, and reset button

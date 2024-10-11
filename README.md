@@ -1,3 +1,3 @@
-# rock-paper-scissors
+# Rock-Paper-Scissors
 
-An implementation of Rock, Paper, Scissors except it's The ROCC, PAEBR, (FaZe) ZIZRS and you're fighting Kult Leader Kanojia BD
+An implementation of the classic Rock, Paper, Scissors game with a doomsday AI twist.
